@@ -1,0 +1,57 @@
+.Card_carousel {
+  margin: 15px auto 0 auto;
+  width: calc(100% - 40px);
+  overflow: hidden;
+}
+
+.slides {
+  overflow: hidden;
+  animation-name: fade;
+  animation-duration: 1s;
+  display: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.Card_carousel img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  max-height: 50vh;
+}
+
+.dot_container {
+  margin: 0 auto;
+  text-align: center;
+}
+.dot {
+  display: inline-block;
+  border-radius: 50%;
+  background: #d3d3d3;
+  padding: 5px;
+  margin: 10px 5px;
+}
+
+
+@media (max-width: 600px) {
+  .Card_carousel {
+    width: calc(100% + 30px);
+    transform: translateX(-15px);
+  }
+
+  .slides {
+    
+    border-radius: 0;
+  }
+  
+
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

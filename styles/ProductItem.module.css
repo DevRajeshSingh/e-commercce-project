@@ -1,0 +1,152 @@
+.product_card {
+  width: 240px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 8px auto;
+  background: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.badge {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: red;
+  color: #fff;
+  padding: 3px 10px;
+  z-index: 1;
+}
+
+.product_tumb {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  padding: 15px;
+  background: transparent;
+}
+
+.product_tumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product_details {
+  padding: 15px;
+  height: fit-content;
+}
+
+.product_catagory {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #585656;
+}
+
+.product_details h4 a {
+  font-weight: 500;
+  display: block;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product_details h4 a:hover {
+  color: #000000;
+}
+
+.product_bottom_details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_bottom_details div {
+  float: left;
+  width: auto;
+}
+
+.product_price {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.product_price div .original_price {
+  font-size: 80%;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.product_price div .discount_percent {
+  font-size: 70%;
+  margin-right: 5px;
+  color: red;
+  font-weight: 400;
+}
+
+.product_links {
+  text-align: right;
+}
+
+.product_links a {
+  display: inline-block;
+  margin-left: 5px;
+  color: #e1e1e1;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.product_links a:hover {
+  color: #000000;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: auto;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border: solid #dfe6f0 2px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  box-shadow: #e2e9f3 0 0 10px;
+  background: #dfe6f0;
+  color: #000000;
+}
+
+@media screen and (min-width: 600px) {
+  .product_card:hover {
+    transition: 0.2s;
+    transform: scale(1.03);
+  }
+}
+@media screen and (max-width: 500px) {
+  .product_card {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .button {
+    width: fit-content;
+    padding: 8px 15px;
+  }
+}
