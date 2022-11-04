@@ -1,15 +1,15 @@
 import "../styles/globals.css";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import BottomNav from "../components/BottomNav";
-
+import Navbar from "../components/Navbar";
+import { AuthContextProvider } from "../context/AuthContext";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <NavBar />
-      <Component {...pageProps} />
-      <Footer />
-      <BottomNav/>
+      <AuthContextProvider>
+        <Navbar />
+        <div className="pt-32 md:pt-16">
+          <Component {...pageProps} />
+        </div>
+      </AuthContextProvider>
     </>
   );
 }
